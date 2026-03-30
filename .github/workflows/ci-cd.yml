@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            docker pull pitchapasaetae/devop880-pipeline:latest
+            docker pull pitchapasaeta/devop880-pipeline:latest
             docker stop my-react-app || true
             docker rm my-react-app || true
             docker run -d --name my-react-app -p 80:80 pitchapasaetae/devop880-pipeline:latest
