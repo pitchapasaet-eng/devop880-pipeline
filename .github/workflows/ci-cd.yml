@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: pitchapasaet-eng/devop880-pipeline:latest
+          tags: pitchapasaetae/devop880-pipeline:latest
 
   deploy:
     needs: build-and-push-docker-image
@@ -41,7 +41,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            docker pull pitchapasaet-eng/devop880-pipeline:latest
+            docker pull pitchapasaetae/devop880-pipeline:latest
             docker stop my-react-app || true
             docker rm my-react-app || true
-            docker run -d --name my-react-app -p 80:80 pitchapasaet-eng/devop880-pipeline:latest
+            docker run -d --name my-react-app -p 80:80 pitchapasaetae/devop880-pipeline:latest
