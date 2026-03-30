@@ -14,6 +14,7 @@ function App() {
 
         <h1>Music Room KUSRC</h1>
         <p>Reserve your practice room easily </p>
+        <p>Update By Pitchap Panisa </p>
       </header>
 
       <div className="card booking-card">
